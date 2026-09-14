@@ -1,115 +1,122 @@
-# 🎬 Alpha Clips
+# Alpha Clips
 
-> **Turn long YouTube videos into viral TikToks, Shorts, and Reels with animated subtitles, face centering, and music in minutes.**
+> **Transform long-form YouTube content into scroll-stopping TikToks, Shorts, and Reels — complete with animated captions, automatic face framing, and background music, all in just a few minutes.**
 
 ---
 
-## ⚡ Quick Start (Setup in 3 Steps)
+## Getting Started (3 Simple Steps)
 
-### Step 1: Requirements
-1. **[Git](https://git-scm.com/)** — (`winget install Git.Git` on Windows, `brew install git` on Mac, or from [git-scm.com](https://git-scm.com/)).
-2. **[Node.js](https://nodejs.org/)** (v18 or newer)
-3. **Python** (v3.10 or newer) — Install from [python.org](https://www.python.org/downloads/) or directly from the [Microsoft Store (Windows)](https://apps.microsoft.com/detail/9ncvdn91xzqp)
-4. **FFmpeg & yt-dlp** (Required to download and render videos)
+### Step 0: Get the Code
+Clone the repository and move into the project folder:
+```bash
+git clone https://github.com/JerrardJ/alpha-clipping-tool.git
+cd alpha-clipping-tool
+```
+
+### Step 1: Prerequisites
+1. **[Git](https://git-scm.com/)** — install via `winget install Git.Git` on Windows, `brew install git` on Mac, or download from [git-scm.com](https://git-scm.com/).
+2. **[Node.js](https://nodejs.org/)** (version 18 or later)
+3. **Python** (version 3.10 or later) — grab it from [python.org](https://www.python.org/downloads/) or the [Microsoft Store (Windows)](https://apps.microsoft.com/detail/9ncvdn91xzqp)
+4. **FFmpeg and yt-dlp** (needed for downloading and rendering videos)
    * **Windows (PowerShell):**
      ```powershell
      winget install Gyan.FFmpeg
      winget install yt-dlp.yt-dlp
      ```
-     *(Close and reopen your terminal after installing so Windows recognizes them)*
+     *(Restart your terminal afterward so Windows picks up the new tools)*
    * **Mac (Terminal):**
      ```bash
      brew install ffmpeg yt-dlp
      ```
-     *(If you don't have Homebrew installed on Mac, install it first from [brew.sh](https://brew.sh))*
+     *(No Homebrew yet? Install it first from [brew.sh](https://brew.sh))*
 
-### Step 2: Install Dependencies
-Inside the project folder, open your terminal and run:
+### Step 2: Install Project Dependencies
+From inside the project folder, run:
 ```bash
 npm install
 python -m pip install -r backend/requirements.txt
 ```
-*(On Mac, use `python3 -m pip install -r backend/requirements.txt`)*
+*(Mac users should use `python3 -m pip install -r backend/requirements.txt` instead)*
 
-### Step 3: Run the App
+### Step 3: Launch the App
 ```bash
 npm run dev
 ```
-Open **`http://localhost:5173`** in your web browser!
+Then open **`http://localhost:5173`** in your browser.
 
 ---
 
-## 🔄 Updating to the Latest Version
+## Keeping Your Copy Up to Date
 
-To update your copy of Alpha Clips with the latest features and fixes, open your terminal inside the `Alpha-Clips` folder and run:
+To pull down the newest features and bug fixes, run this from inside the `alpha-clipping-tool` folder:
 
 ```bash
 git pull
 npm install
 python -m pip install -r backend/requirements.txt
 ```
-*(On Mac, use `python3 -m pip install -r backend/requirements.txt`)*
+*(Mac: `python3 -m pip install -r backend/requirements.txt`)*
 
 ---
 
-## 🔑 Free Google Gemini API Key (Takes 1 Minute)
+## Getting a Free Google Gemini API Key (1 Minute)
 
-Alpha Clips uses Google's AI to find the best viral moments for free:
-1. Go to **[Google AI Studio](https://aistudio.google.com/)** and sign in with any Google account.
-2. Click **"Get API key"** (or **"Create API key"**).
-3. Copy your key (starts with `AIzaSy...`).
-4. Paste it into the **Gemini API Key** field in the app.
+Alpha Clips relies on Google's AI to identify the strongest viral-worthy moments, at no cost:
+1. Visit **[Google AI Studio](https://aistudio.google.com/)** and log in with any Google account.
+2. Select **"Get API key"** (or **"Create API key"**).
+3. Copy the generated key (it begins with `AIzaSy...`).
+4. Drop it into the **Gemini API Key** field within the app.
 
-> 💡 **Tip:** You can also type `mock` in the API Key box to test out the app with sample data without an API key!
-
----
-
-## 🎯 How to Use
-
-1. **Paste a YouTube URL** — Enter any podcast, stream, or video link.
-2. **Choose Duration** — Pick `~15s` (fast hooks), `~30s` (standard shorts), or `~60s` (story clips).
-3. **Click "Analyze Video"** — The AI finds the most exciting moments using YouTube audience retention data.
-4. **Customize in Clip Studio** — Adjust your video style:
-   * **Frame & Crop**: Fullscreen 9:16 vertical, square, or split-screen facecam.
-   * **Face Tracking**: Automatically keeps the speaker in the center of the frame.
-   * **Subtitles**: Choose viral animated karaoke caption styles and fonts.
-   * **Branding & Audio**: Add your watermark logo, background music, and hook sound effects.
-   * **Hardware Acceleration**: Choose your graphics card (NVIDIA, AMD, Intel) or CPU.
-5. **Batch Render & Download** — Click **Batch Render**, then download all your finished videos together in one **.ZIP** file!
+> **Tip:** Don't have a key yet? Type `mock` in the API Key field to try the app with sample data instead.
 
 ---
 
-## ❓ Common Problems & Easy Fixes
+## How It Works
+
+1. **Drop in a YouTube link** — any podcast, livestream, or standard video works.
+2. **Pick your clip length** — `~15s` for quick hooks, `~30s` for standard shorts, or `~60s` for longer storytelling clips.
+3. **Hit "Analyze Video"** — the AI scans YouTube retention data to surface the most engaging segments.
+4. **Fine-tune in Clip Studio**:
+   * **Frame and Crop**: vertical 9:16 fullscreen, square, or split-screen facecam layouts.
+   * **Face Tracking**: keeps the speaker centered automatically as they move.
+   * **Subtitles**: pick from viral-style animated karaoke captions and font options.
+   * **Branding and Audio**: layer in a watermark logo, background music, and hook sound effects.
+   * **Hardware Acceleration**: select your GPU (NVIDIA, AMD, Intel) or fall back to CPU rendering.
+5. **Render in Batch and Download** — click **Batch Render**, then grab every finished clip together as a single **.ZIP** file.
+
+---
+
+## Troubleshooting
 
 ### 1. "Failed to render video" or `The system cannot find the file specified`
-* **Cause:** `ffmpeg` or `yt-dlp` is missing on your computer.
+* **Cause:** `ffmpeg` or `yt-dlp` isn't installed on your machine.
 * **Fix:**
   * **Windows (PowerShell):**
     ```powershell
     winget install Gyan.FFmpeg
     winget install yt-dlp.yt-dlp
     ```
-    *(Then close and reopen your terminal)*
+    *(Restart your terminal after installing)*
   * **Mac (Terminal):**
     ```bash
     brew install ffmpeg yt-dlp
     ```
-  * Or install directly via Python: `pip install yt-dlp`
+  * Alternatively, install via Python: `pip install yt-dlp`
 
 ### 2. "Sign in to confirm you're not a bot"
-* **Cause:** YouTube blocks video downloads if too many requests are sent without logging in.
-* **Fix:** Click the 🍪 **Cookies** button in the top navigation bar, export your YouTube cookies using a free browser extension (like *Get cookies.txt locally*), and paste them into the app.
+* **Cause:** YouTube throttles downloads once too many requests come in without an authenticated session.
+* **Fix:** Click the **Cookies** button in the top navigation bar, export your YouTube cookies with a free browser extension (such as *Get cookies.txt locally*), then paste them into the app.
 
-### 3. Does this work on AMD graphics cards and Mac?
-* **Yes!** Alpha Clips automatically supports:
+### 3. Is AMD and Mac hardware supported?
+* **Yes.** Alpha Clips automatically detects and supports:
   * **NVIDIA** (`h264_nvenc`)
-  * **AMD** (`h264_amf` on Radeon GPUs & Ryzen CPUs)
-  * **Intel** (`h264_qsv` on Arc & UHD Graphics)
-  * **Apple Mac & CPU Software** (`libx264` universal high-speed fallback)
-* You can switch your preferred hardware acceleration encoder anytime in the Render Settings or History card.
+  * **AMD** (`h264_amf` for Radeon GPUs and Ryzen CPUs)
+  * **Intel** (`h264_qsv` for Arc and UHD Graphics)
+  * **Apple/Mac and CPU fallback** (`libx264`, a universal high-speed software encoder)
+* Your preferred hardware encoder can be switched anytime from the Render Settings or History panel.
 
 ---
 
-## 📄 License
+## License
 
-Distributed under the **MIT License**. Free for personal and commercial use!
+Released under the **MIT License** — free to use for both personal and commercial projects.
